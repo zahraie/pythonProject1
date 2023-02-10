@@ -214,7 +214,7 @@ for epoch in range(0, cfg.NUM_OF_EPOCHS):
 print(f"[INFO] Total training time: {datetime.now() - start_time}...")
 
 # move model back to cpu and save the trained model to disk
-if device == "cuda":
+if device == "cpu":
     model = model.to("cpu")
 torch.save(model.state_dict(), args['model'])
 
